@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style>
+        .range {
+            position: relative;
+            width: 400px;
+            height: 60px;
+        }
+
+        .thumb {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background-color: #F24C27;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            cursor: pointer;
+        }
+
+        .track {
+            position: absolute;
+            width: 100%;
+            height: 60px;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background: #5F5448;
+        }
+    </style>
+</head>
+<body>
+<div class="range">
+
+    <div class="thumb"></div>
+    <div class="track"></div>
+
+</div>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="scripts/range.js"></script>
+</body>
+</html>
