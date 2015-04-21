@@ -1,10 +1,6 @@
 /**
  * Created by samfisher on 20/04/15.
  */
-/**
- * Created by samfisher on 20/04/15.
- */
-
 
 var Range = (function (window, $, undefined) {
 
@@ -23,7 +19,10 @@ var Range = (function (window, $, undefined) {
       bound = {};
 
   function Range(opts) {
+    // parse options
     options = $.extend({}, defaults, opts || {});
+
+    // initialize module
     initialize();
   }
 
@@ -127,8 +126,10 @@ var Range = (function (window, $, undefined) {
     return Math.min(Math.max(value, min), max);
   };
 
+  // expose the module
   return Range;
+
 })(window, jQuery);
 
-// new range setting default
+// new range with default settings
 var range = new Range();
