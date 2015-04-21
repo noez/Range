@@ -9,7 +9,8 @@ var Range = (function (window, $, undefined) {
         from: 1,
         to: 10,
         step: 1,
-        el: '.range'
+        el: '.range',
+        onStateChange : function(value){}
       },
       options = {},
       $el, el, thumb, track = null,
@@ -50,10 +51,10 @@ var Range = (function (window, $, undefined) {
     el = $el[0];
 
     // jquery thumb
-    thumb = $el.find('.thumb');
+    thumb = $el.find('.range-thumb');
 
     // track thumb
-    track = $el.find('.track');
+    track = $el.find('.range-track');
 
     // check bound box to clamp thumb
     bound = {
@@ -99,7 +100,11 @@ var Range = (function (window, $, undefined) {
     thumb.css({left: newPoint});
 
     // value to dispatch
-    console.log('range value: ' + value);
+    value = clamp(value, options.from, options.to);
+    options.onStateChange({
+      value: value,
+      from : options.from,
+      to: options.to });
   };
 
   // get mouse/touch position
@@ -131,5 +136,3 @@ var Range = (function (window, $, undefined) {
 
 })(window, jQuery);
 
-// new range with default settings
-var range = new Range();

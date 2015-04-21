@@ -1,0 +1,69 @@
+* {
+  box-sizing: border-box; }
+
+p {
+  text-align: center; }
+
+.diable-selection {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.range {
+  position: relative;
+  width: 400px;
+  height: 32px;
+  margin: 0 auto; }
+  .range .range-thumb {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #F24C27;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    cursor: pointer; }
+  .range .range-track {
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: #5F5448; }
+
+.zoom {
+  border: 1px dashed black;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 1em auto; }
+  .zoom .zoom-inner {
+    padding: 2em;
+    overflow: hidden;
+    position: relative; }
+  .zoom .zoom-container {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border: 1px dashed darkcyan; }
+  .zoom .zoom-mask {
+    display: block;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative; }
+  .zoom .zoom-image {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .zoom .zoom-image.zoom-image-overlay {
+      opacity: 0.3;
+      cursor: move; }
+
+/*# sourceMappingURL=demo.css.map */

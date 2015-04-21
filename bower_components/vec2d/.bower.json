@@ -1,0 +1,31 @@
+{
+  "name": "vec2d",
+  "main": "./build/vec2d.js",
+  "version": "2.1.0",
+  "homepage": "https://github.com/evanshortiss/vec2d",
+  "authors": [
+    "Evan Shortiss"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "index.html",
+    "src",
+    "Gruntfile.js",
+    "package.json"
+  ],
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.1.0",
+    "commit": "2d25468a5124dd294d169ed403f423ff4bc0dcf4"
+  },
+  "_source": "git://github.com/evanshortiss/vec2d.git",
+  "_target": "~2.1.0",
+  "_originalSource": "vec2d",
+  "_direct": true
+}

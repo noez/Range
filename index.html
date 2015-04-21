@@ -3,45 +3,34 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title></title>
-    <style>
-        .range {
-            position: relative;
-            width: 400px;
-            height: 60px;
-        }
-
-        .thumb {
-            position: absolute;
-            width: 60px;
-            height: 60px;
-            background-color: #F24C27;
-            top: 0;
-            left: 0;
-            z-index: 5;
-            cursor: pointer;
-        }
-
-        .track {
-            position: absolute;
-            width: 100%;
-            height: 60px;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background: #5F5448;
-        }
-    </style>
+    <link rel="stylesheet" href="css/demo.css"/>
 </head>
 <body>
-<div class="range">
 
-    <div class="thumb"></div>
-    <div class="track"></div>
-
+<p>Arrastrar para centrar imagen</p>
+<div class="zoom">
+    <div class="zoom-inner">
+        <div class="zoom-container">
+            <div class="zoom-mask">
+                <img class="zoom-image" src="img/perro.jpg"/>
+            </div>
+            <img class="zoom-image zoom-image-overlay" src="img/perro.jpg"/>
+        </div>
+    </div>
 </div>
+
+<p>Control de escala</p>
+<div class="range">
+    <div class="range-thumb"></div>
+    <div class="range-track"></div>
+</div>
+
 <script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/vec2d/dist/vec2d.js"></script>
+<script src="scripts/zoom.js"></script>
 <script src="scripts/range.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>
