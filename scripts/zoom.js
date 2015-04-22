@@ -36,11 +36,21 @@ var Zoom = (function (window, $, undefine) {
         var newWidth = clamp(range.value * imageRect.width,
                 imageRect.width,imageRect.width * range.to),
             newHeight = newWidth * imageRect.height / imageRect.width;
+        var newTop = range.value*vector_image_init.y - $zoom_mask.outerHeight()*(range.value-1)/2,
+            newLeft = range.value*vector_image_init.x - $zoom_mask.outerWidth()*(range.value-1)/2 ;
+        vector_image_init.setAxes(newLeft, newTop);
+        console.log('rangevalue: ' + range.value);
+        console.log('ntop: ' + newTop);
+        console.log('nleft: ' + newLeft);
 
         $zoom_image.css({
             width : newWidth,
-            heigth : newHeight
+            heigth : newHeight,
+            top: clamp(vector_image_init.y, $zoom_mask.outerHeight() - newHeight, 0),
+            left: clamp(vector_image_init.x , $zoom_mask.outerWidth() - newWidth, 0)
         });
+        
+       
     };
 
     var initialize = function () {
